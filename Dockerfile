@@ -37,7 +37,7 @@ COPY ./scripts/heroku.sh /tmp/heroku.sh
 RUN chmod +x /tmp/heroku.sh && \
 /tmp/heroku.sh
 
-COPY ./scripts/base.sh /tmp/gems.sh
+COPY ./scripts/gems.sh /tmp/gems.sh
 RUN chmod +x /tmp/gems.sh && \
 /tmp/gems.sh
 
