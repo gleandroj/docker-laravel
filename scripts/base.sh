@@ -19,7 +19,6 @@ apt-get update && apt-get install -y --no-install-recommends \
     cron \
     curl \
     software-properties-common \
-    python-software-properties \
     ruby-full
 
 apt-get install -y \
