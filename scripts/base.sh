@@ -19,7 +19,8 @@ apt-get update && apt-get install -y --no-install-recommends \
     cron \
     curl \
     software-properties-common \
-    ruby-full
+    ruby-full \
+    gnupg2
 
 apt-get install -y \
   ghostscript \
