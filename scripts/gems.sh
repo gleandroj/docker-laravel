@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo -e "\nInstalando Gemas..."
+echo "\nInstalando Gemas..."
 
 gem install bundler -N
 gem install capistrano -N
