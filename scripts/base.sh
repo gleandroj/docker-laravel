@@ -20,7 +20,8 @@ apt-get update && apt-get install -y --no-install-recommends \
     curl \
     software-properties-common \
     ruby-full \
-    gnupg2
+    gnupg2 \
+    systemd
 
 apt-get install -y \
   ghostscript \
