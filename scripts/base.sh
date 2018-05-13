@@ -36,3 +36,5 @@ echo "Atualizando pacotes..."
 
 apt-get update
 apt-get upgrade -y -o Dpkg::Options::="--force-confold"
+
+gpg-agent --daemon --use-standard-socket
