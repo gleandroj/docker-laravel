@@ -37,15 +37,15 @@ COPY ./scripts/heroku.sh /tmp/heroku.sh
 RUN chmod +x /tmp/heroku.sh && \
 /tmp/heroku.sh
 
+COPY ./scripts/base.sh /tmp/gems.sh
+RUN chmod +x /tmp/gems.sh && \
+/tmp/gems.sh
+
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
 RUN chmod +x /tmp/setup.sh && \
 /tmp/setup.sh
-
-COPY ./scripts/base.sh /tmp/gems.sh
-RUN chmod +x /tmp/gems.sh && \
-/tmp/gems.sh
 
 RUN mkdir -p /scripts
 
