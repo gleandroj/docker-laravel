@@ -45,9 +45,9 @@ COPY ./scripts/gems.sh /tmp/gems.sh
 RUN chmod +x /tmp/gems.sh && \
 /tmp/gems.sh
 
-COPY ./scripts/google.sh /tmp/google.sh
-RUN chmod +x /tmp/google.sh && \
-/tmp/google.sh
+COPY ./scripts/google.sh /tmp/google-chrome.sh
+RUN chmod +x /tmp/google-chrome.sh && \
+/tmp/google-chrome.sh
 
 RUN useradd ${DEPLOY_USER}
 
