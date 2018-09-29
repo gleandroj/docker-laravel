@@ -13,6 +13,10 @@ COPY ./scripts/base.sh /tmp/sudo.sh
 RUN chmod +x /tmp/sudo.sh && \
 /tmp/sudo.sh
 
+COPY ./scripts/java.sh /tmp/java.sh
+RUN chmod +x /tmp/java.sh && \
+/tmp/java.sh
+
 COPY ./scripts/imagemagick.sh /tmp/imagemagick.sh
 RUN chmod +x /tmp/imagemagick.sh && \
 /tmp/imagemagick.sh
@@ -40,10 +44,6 @@ RUN chmod +x /tmp/heroku.sh && \
 COPY ./scripts/gems.sh /tmp/gems.sh
 RUN chmod +x /tmp/gems.sh && \
 /tmp/gems.sh
-
-COPY ./scripts/java.sh /tmp/java.sh
-RUN chmod +x /tmp/java.sh && \
-/tmp/java.sh
 
 COPY ./scripts/google.sh /tmp/google.sh
 RUN chmod +x /tmp/google.sh && \
