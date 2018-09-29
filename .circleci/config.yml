@@ -4,6 +4,8 @@ jobs:
    machine: true
    steps:
      - checkout
+     - setup_remote_docker: 
+         docker_layer_caching: true
      # start proprietary DB using private Docker image
      # with credentials stored in the UI
      - run: |
