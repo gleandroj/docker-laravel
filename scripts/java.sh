@@ -6,7 +6,5 @@ export DEBIAN_FRONTEND=noninteractive
 ###############
 ## Instala Java
 ###############
-
-add-apt-repository ppa:webupd8team/java
-apt-get install oracle-java8-installer -y
+apt-get install openjdk-8-jdk -y
 ENV JAVA_HOME "/usr/bin/java"
