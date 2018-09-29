@@ -29,7 +29,8 @@ apt-get install -y \
   zbar-tools \
   libzbar0 \
   libxml2 \
-  monit
+  monit \
+  libnss3-dev
 
 ############################################
 ## Atualizar pacotes

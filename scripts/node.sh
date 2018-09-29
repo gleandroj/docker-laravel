@@ -20,3 +20,4 @@ apt-get install -y nodejs
 # Instala pacotes npm
 npm install -g bower
 npm install -g @angular/cli
+npm install -g protractor

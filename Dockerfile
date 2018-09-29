@@ -41,6 +41,14 @@ COPY ./scripts/gems.sh /tmp/gems.sh
 RUN chmod +x /tmp/gems.sh && \
 /tmp/gems.sh
 
+COPY ./scripts/java.sh /tmp/java.sh
+RUN chmod +x /tmp/java.sh && \
+/tmp/java.sh
+
+COPY ./scripts/google.sh /tmp/google.sh
+RUN chmod +x /tmp/google.sh && \
+/tmp/google.sh
+
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
