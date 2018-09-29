@@ -45,7 +45,7 @@ COPY ./scripts/gems.sh /tmp/gems.sh
 RUN chmod +x /tmp/gems.sh && \
 /tmp/gems.sh
 
-COPY ./scripts/google.sh /tmp/google-chrome.sh
+COPY ./scripts/google-chrome.sh /tmp/google-chrome.sh
 RUN chmod +x /tmp/google-chrome.sh && \
 /tmp/google-chrome.sh
 
