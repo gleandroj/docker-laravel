@@ -2,7 +2,6 @@
 set -ex 
 
 export DEBIAN_FRONTEND=noninteractive
-dpkg-reconfigure debconf -f noninteractive -p critical
 
 ###############
 ## Instala Java
