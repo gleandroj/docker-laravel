@@ -10,7 +10,7 @@ service cron start
 service php7.1-fpm start
 # service memcached restart
 
-monit stop nginx
+#monit stop nginx
 service nginx stop
 
 echo -e "\nIniciando o monit..."

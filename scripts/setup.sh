@@ -37,6 +37,7 @@ sed -i "s/;listen\.owner.*/listen.owner = ${DEPLOY_USER}/" /etc/php/7.1/fpm/pool
 sed -i "s/;listen\.group.*/listen.group = ${DEPLOY_USER}/" /etc/php/7.1/fpm/pool.d/www.conf
 sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.1/fpm/pool.d/www.conf
 sed -i "s/;request_terminate_timeout.*/request_terminate_timeout = 60/" /etc/php/7.1/fpm/pool.d/www.conf
+sed -i "s/;clear_env = no/clear_env = no/" /etc/php/7.1/fpm/pool.d/www.conf
 
 # Ajusta as permicoes do diretorio de sessoes
 chmod 733 /var/lib/php/sessions
@@ -63,7 +64,6 @@ echo "Configurando o NGINX..."
 sed -i "s/user www-data;/user ${DEPLOY_USER};/" /etc/nginx/nginx.conf
 sed -i "s/worker_processes.*/worker_processes auto;/" /etc/nginx/nginx.conf
 sed -i "s/# multi_accept.*/multi_accept on;/" /etc/nginx/nginx.conf
-sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 128;/" /etc/nginx/nginx.conf
 
 # Configura o Gzip
 cat > /etc/nginx/conf.d/gzip.conf << EOF
