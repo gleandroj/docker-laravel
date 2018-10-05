@@ -21,5 +21,6 @@ apt-get install -y nodejs
 npm install -g bower
 npm install -g @angular/cli
 npm install -g protractor
+npm install -g pm2
 
 webdriver-manager update
