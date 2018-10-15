@@ -53,6 +53,10 @@ COPY ./scripts/android.sh /tmp/android.sh
 RUN chmod +x /tmp/android.sh && \
 /tmp/android.sh
 
+COPY ./scripts/gradle.sh /tmp/gradle.sh
+RUN chmod +x /tmp/gradle.sh && \
+/tmp/gradle.sh
+
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
