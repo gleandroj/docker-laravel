@@ -38,7 +38,7 @@ export KOTLIN_HOME=/opt/kotlinc
 export ANDROID_HOME=/opt/android-sdk
 export PATH=${PATH}:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
 export _JAVA_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
-
+export SDK_HOME=/opt/
 export ANDROID_NDK_VERSION=r16b
 export ANDROID_NDK_URL=http://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
 export ANDROID_NDK_HOME=${SDK_HOME}/android-ndk-${ANDROID_NDK_VERSION}
