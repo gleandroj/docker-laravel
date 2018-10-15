@@ -1,4 +1,4 @@
-export SDK_HOME=/usr/local
+export SDK_HOME=/opt
 
 apt-get --quiet update --yes
 apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 git --no-install-recommends
