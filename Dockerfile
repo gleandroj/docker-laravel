@@ -68,7 +68,7 @@ RUN chown $USER:$USER /scripts && \
     chown -R deploy:deploy /home/deploy
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
-ENV GRADLE_HOME /opt/gradle
+ENV GRADLE_HOME /opt/gradle-4.1
 ENV KOTLIN_HOME /opt/kotlinc
 ENV ANDROID_HOME /opt/android-sdk
 ENV PATH ${PATH}:${ANDROID_HOME}/cmake/bin:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin:${ANDROID_NDK_HOME}
