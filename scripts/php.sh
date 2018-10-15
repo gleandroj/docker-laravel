@@ -7,9 +7,12 @@ export DEBIAN_FRONTEND=noninteractive
 ## Instalar PHP 7.1
 ############################################
 
+add-apt-repository ppa:ondrej/php
+
 export LANG=C.UTF-8
 
 echo "Instalando o PHP 7.1 ..."
+#php7.1-memcached \
 
 apt-get install -y  \
   libpcre3 \
@@ -17,7 +20,6 @@ apt-get install -y  \
   php7.1-dev \
   php7.1-pgsql \
   php7.1-sqlite3 \
-  php7.1-memcached \
   php7.1-gd \
   php7.1-curl \
   php7.1-imap \
