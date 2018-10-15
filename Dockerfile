@@ -71,7 +71,7 @@ RUN chown $USER:$USER /scripts && \
     mkdir -p /home/deploy/app && \
     chown -R deploy:deploy /home/deploy
 
-env JAVA_HOME="/usr/bin/java"
+#env JAVA_HOME="/usr/bin/java"
 env ANDROID_HOME=/usr/lib/android-sdk
 env PATH=$PATH:/opt/gradle/gradle-4.1/bin
 
