@@ -11,10 +11,10 @@ echo "Instalando Gradle..."
 
 apt-get install -y unzip
 
-wget https://services.gradle.org/distributions/gradle-4.1-bin.zip
+wget https://services.gradle.org/distributions/gradle-4.1-all.zip
 
 mkdir /opt/gradle
-unzip -d /opt/gradle gradle-4.1-bin.zip
+unzip -d /opt/gradle gradle-4.1-all.zip
 export PATH=$PATH:/opt/gradle/gradle-4.1/bin
 
-rm -rf gradle-4.1-bin.zip
+rm -rf gradle-4.1-all.zip
