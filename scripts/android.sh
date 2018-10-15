@@ -18,5 +18,5 @@ echo "Instalando Android SDK..."
 #export ANDROID_HOME=/opt/android-sdk/
 #chmod -R 777 /opt/android-sdk/
 apt-get install -y android-sdk
-# install all sdk packages
-android update sdk --no-ui
+#install all sdk packages
+#android update sdk --no-ui
