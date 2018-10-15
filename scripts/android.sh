@@ -39,4 +39,4 @@ export ANDROID_HOME=/opt/android-sdk
 export PATH=${PATH}:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
 export _JAVA_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
 
-sdkmanager update sdk --no-ui
+#sdkmanager update sdk --no-ui
