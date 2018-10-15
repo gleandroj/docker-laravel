@@ -53,6 +53,10 @@ COPY ./scripts/android.sh /tmp/android.sh
 RUN chmod +x /tmp/android.sh && \
 /tmp/android.sh
 
+COPY ./scripts/android_license_accepter.sh /tmp/android_license_accepter.sh
+RUN chmod +x /tmp/android_license_accepter.sh && \
+/tmp/android_license_accepter.sh
+
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
