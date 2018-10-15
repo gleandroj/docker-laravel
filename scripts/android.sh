@@ -18,8 +18,6 @@ cd android-sdk-linux/tools
 # install all sdk packages
 ./android update sdk --no-ui
 
-export PATH=${PATH}:$HOME/sdk/android-sdk-linux/platform-tools:$HOME/sdk/android-sdk-linux/tools:$HOME/sdk/android-sdk-linux/build-tools/22.0.1/
-
 # adb
 #apt-get install libc6:i386 libstdc++6:i386
 apt-get install android-tools-adb -y
@@ -29,4 +27,5 @@ apt-get install android-tools-adb -y
 mv /android-sdk-linux/** /usr/lib/android-sdk
 rm -rf android-sdk_r24.2-linux.tgz
 
-export ANDROID_HOME=/usr/lib/android-sdk
+export PATH=${PATH}:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/build-tools/22.0.1/
+export ANDROID_HOME=/opt/android-sdk/
