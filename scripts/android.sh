@@ -54,7 +54,7 @@ wget -q https://dl.google.com/android/repository/cmake-3.6.3155560-linux-x86_64.
 unzip -q android-cmake.zip -d ${ANDROID_HOME}/cmake
 export PATH=${PATH}:${ANDROID_HOME}/cmake/bin
 chmod u+x ${ANDROID_HOME}/cmake/bin/ -R
-
+rm -rf android-cmake.zip
 #android-wait-for-emulator
 #curl https://raw.githubusercontent.com/Cangol/android-gradle-docker/master/android-wait-for-emulator -o ${SDK_HOME}/bin/android-wait-for-emulator
 #chmod u+x ${SDK_HOME}/bin/android-wait-for-emulator
