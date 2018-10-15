@@ -39,4 +39,26 @@ export ANDROID_HOME=/opt/android-sdk
 export PATH=${PATH}:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
 export _JAVA_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
 
+export ANDROID_NDK_VERSION=r16b
+export ANDROID_NDK_URL=http://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
+export ANDROID_NDK_HOME=${SDK_HOME}/android-ndk-${ANDROID_NDK_VERSION}
+export PATH=${ANDROID_NDK_HOME}:${ANDROID_HOME}/cmake/bin:$PATH
+
+curl -L "${ANDROID_NDK_URL}" -o android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip  \
+  && unzip android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip -d ${SDK_HOME}  \
+  && rm -rf android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
+
+wget -q https://dl.google.com/android/repository/cmake-3.6.3155560-linux-x86_64.zip -O android-cmake.zip
+unzip -q android-cmake.zip -d ${ANDROID_HOME}/cmake
+
+curl https://raw.githubusercontent.com/Cangol/android-gradle-docker/master/android-wait-for-emulator -o ${SDK_HOME}/bin/android-wait-for-emulator
+
+chmod u+x ${JAVA_HOME}/ -R
+chmod u+x ${KOTLIN_HOME}/ -R
+chmod u+x ${GRADLE_HOME}/ -R
+chmod u+x ${ANDROID_HOME}/ -R
+chmod u+x ${ANDROID_NDK_HOME}/ -R
+chmod u+x ${ANDROID_HOME}/cmake/bin/ -R
+chmod u+x ${SDK_HOME}/bin/android-wait-for-emulator
+
 #sdkmanager update sdk --no-ui
