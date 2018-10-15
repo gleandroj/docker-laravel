@@ -26,5 +26,7 @@ apt-get install android-tools-adb -y
 # aapt
 #apt-get install zlib1g:i386
 
-mv /android-sdk-linux /usr/lib/android-sdk
+mv /android-sdk-linux/** /usr/lib/android-sdk
 rm -rf android-sdk_r24.2-linux.tgz
+
+export ANDROID_HOME=/usr/lib/android-sdk
