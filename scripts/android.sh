@@ -19,11 +19,9 @@ cd android-sdk-linux/tools
 ./android update sdk --no-ui
 
 # set path
-vi ~/.zshrc << EOT
+#vi ~/.zshrc << EOT
 
 export PATH=${PATH}:$HOME/sdk/android-sdk-linux/platform-tools:$HOME/sdk/android-sdk-linux/tools:$HOME/sdk/android-sdk-linux/build-tools/22.0.1/
-
-EOT
 
 source ~/.zshrc
 
