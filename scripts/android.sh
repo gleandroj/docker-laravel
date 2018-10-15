@@ -32,4 +32,11 @@ wget -q https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_V
 unzip *tools*linux*.zip
 rm *tools*linux*.zip
 
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export GRADLE_HOME=/opt/gradle
+export KOTLIN_HOME=/opt/kotlinc
+export ANDROID_HOME=/opt/android-sdk
+export PATH=${PATH}:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
+export _JAVA_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
+
 android update sdk --no-ui
