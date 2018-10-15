@@ -76,6 +76,8 @@ env PATH=$PATH:/opt/gradle/gradle-4.1/bin
 env PATH=${PATH}:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/build-tools/22.0.1/
 env ANDROID_HOME=/opt/android-sdk/
 
+chmod 777 /opt/android-sdk/
+
 ## onbuild
 ONBUILD USER root
 
