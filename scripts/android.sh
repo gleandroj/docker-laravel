@@ -22,6 +22,6 @@ export PATH=${PATH}:$HOME/sdk/android-sdk-linux/platform-tools:$HOME/sdk/android
 
 # adb
 #apt-get install libc6:i386 libstdc++6:i386
-apt-get install android-tools-adb
+apt-get install android-tools-adb -y
 # aapt
 #apt-get install zlib1g:i386
