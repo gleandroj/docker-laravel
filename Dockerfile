@@ -53,10 +53,6 @@ COPY ./scripts/android.sh /tmp/android.sh
 RUN chmod +x /tmp/android.sh && \
 /tmp/android.sh
 
-COPY ./scripts/gradle.sh /tmp/gradle.sh
-RUN chmod +x /tmp/gradle.sh && \
-/tmp/gradle.sh
-
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
@@ -71,9 +67,12 @@ RUN chown $USER:$USER /scripts && \
     mkdir -p /home/deploy/app && \
     chown -R deploy:deploy /home/deploy
 
-env PATH=$PATH:/opt/gradle/gradle-4.1/bin
-env PATH=${PATH}:/usr/lib/android-sdk/platform-tools:/usr/lib/android-sdk/tools:/usr/lib/android-sdk/build-tools/24.0.0/
-env ANDROID_HOME=/usr/lib/android-sdk
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV GRADLE_HOME /opt/gradle
+ENV KOTLIN_HOME /opt/kotlinc
+ENV ANDROID_HOME /opt/android-sdk
+ENV PATH ${PATH}:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
+ENV _JAVA_OPTIONS -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
 
 ## onbuild
 ONBUILD USER root

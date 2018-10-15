@@ -9,9 +9,20 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo "Instalando Android SDK..."
 
-apt-get install -y android-sdk
+#apt-get install -y android-sdk
 
-export PATH=${PATH}:/usr/lib/android-sdk/platform-tools:/usr/lib/android-sdk/tools:/usr/lib/android-sdk/build-tools/24.0.0/
-export ANDROID_HOME=/usr/lib/android-sdk
+export GRADLE_VERSION=4.10
+cd /opt
+wget -q https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
+unzip gradle*.zip
+ls -d */ | sed 's/\/*$//g' | xargs -I{} mv {} gradle
+rm gradle*.zip
+
+export ANDROID_SDK_VERSION=4333796
+mkdir -p /opt/android-sdk
+cd /opt/android-sdk
+wget -q https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_VERSION}.zip
+unzip *tools*linux*.zip
+rm *tools*linux*.zip
 
 android update sdk --no-ui
