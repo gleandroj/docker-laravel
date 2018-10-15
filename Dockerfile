@@ -53,10 +53,6 @@ COPY ./scripts/android.sh /tmp/android.sh
 RUN chmod +x /tmp/android.sh && \
 /tmp/android.sh
 
-COPY ./scripts/android_license_accepter.sh /tmp/android_license_accepter.sh
-RUN chmod +x /tmp/android_license_accepter.sh && \
-/tmp/android_license_accepter.sh
-
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
@@ -77,6 +73,10 @@ ENV KOTLIN_HOME /opt/kotlinc
 ENV ANDROID_HOME /opt/android-sdk
 ENV PATH ${PATH}:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
 ENV _JAVA_OPTIONS -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+
+COPY ./scripts/android_license_accepter.sh /tmp/android_license_accepter.sh
+RUN chmod +x /tmp/android_license_accepter.sh && \
+/tmp/android_license_accepter.sh
 
 ## onbuild
 ONBUILD USER root
