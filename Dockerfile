@@ -49,6 +49,10 @@ COPY ./scripts/google-chrome.sh /tmp/google-chrome.sh
 RUN chmod +x /tmp/google-chrome.sh && \
 /tmp/google-chrome.sh
 
+COPY ./scripts/android.sh /tmp/android.sh
+RUN chmod +x /tmp/android.sh && \
+/tmp/android.sh
+
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
