@@ -17,4 +17,4 @@ mkdir /opt/gradle
 unzip -d /opt/gradle gradle-3.4.1-bin.zip
 export PATH=$PATH:/opt/gradle/gradle-3.4.1/bin
 
-rm -rf gradle-3.4.1-bin.zip
+rm -rf gradle-*.zip
