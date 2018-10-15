@@ -15,7 +15,7 @@ export GRADLE_VERSION=4.10
 cd /opt
 wget -q https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
 unzip gradle*.zip
-ls -d */ | sed 's/\/*$//g' | xargs -I{} mv {} gradle
+#ls -d */ | sed 's/\/*$//g' | xargs -I{} mv {} gradle
 rm gradle*.zip
 
 export ANDROID_SDK_VERSION=4333796
