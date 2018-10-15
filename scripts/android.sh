@@ -13,21 +13,15 @@ echo "Instalando Android SDK..."
 wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
 
 tar -xvf android-sdk_r24.2-linux.tgz
-cd android-sdk-linux/tools
 
-# install all sdk packages
-./android update sdk --no-ui
 
-# adb
-#apt-get install libc6:i386 libstdc++6:i386
-apt-get install android-tools-adb -y
-# aapt
-#apt-get install zlib1g:i386
-
-mv /android-sdk-linux/** /usr/lib/android-sdk
+mv /android-sdk-linux/** /opt/android-sdk/
 rm -rf android-sdk_r24.2-linux.tgz
-
-chmod 777 /opt/android-sdk/
 
 export PATH=${PATH}:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/build-tools/22.0.1/
 export ANDROID_HOME=/opt/android-sdk/
+
+chmod 777 /opt/android-sdk/
+
+# install all sdk packages
+android update sdk --no-ui
