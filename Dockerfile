@@ -73,7 +73,7 @@ RUN chown $USER:$USER /scripts && \
 
 env JAVA_HOME="/usr/bin/java"
 env ANDROID_HOME=/usr/lib/android-sdk
-env PATH=$PATH:/opt/gradle/gradle-3.4.1/bin
+env PATH=$PATH:/opt/gradle/gradle-4.1/bin
 
 ## onbuild
 ONBUILD USER root
