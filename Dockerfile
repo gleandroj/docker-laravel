@@ -72,9 +72,8 @@ RUN chown $USER:$USER /scripts && \
     chown -R deploy:deploy /home/deploy
 
 env PATH=$PATH:/opt/gradle/gradle-4.1/bin
-#env JAVA_HOME="/usr/bin/java"
-#env PATH=${PATH}:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/build-tools/22.0.1/
-#env ANDROID_HOME=/opt/android-sdk/
+env PATH=${PATH}:/usr/lib/android-sdk/platform-tools:/usr/lib/android-sdk/tools:/usr/lib/android-sdk/build-tools/22.0.1/
+env ANDROID_HOME=/usr/lib/android-sdk
 
 ## onbuild
 ONBUILD USER root

@@ -9,14 +9,9 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo "Instalando Android SDK..."
 
-# download android sdk
-#wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
-#tar -xvf android-sdk_r24.2-linux.tgz
-#mv /android-sdk-linux/** /opt/android-sdk/
-#rm -rf android-sdk_r24.2-linux.tgz
-#export PATH=${PATH}:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/build-tools/22.0.1/
-#export ANDROID_HOME=/opt/android-sdk/
-#chmod -R 777 /opt/android-sdk/
 apt-get install -y android-sdk
-#install all sdk packages
-#android update sdk --no-ui
+
+export PATH=${PATH}:/usr/lib/android-sdk/platform-tools:/usr/lib/android-sdk/tools:/usr/lib/android-sdk/build-tools/22.0.1/
+export ANDROID_HOME=/usr/lib/android-sdk
+
+android update sdk --no-ui
