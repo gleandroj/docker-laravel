@@ -18,12 +18,7 @@ cd android-sdk-linux/tools
 # install all sdk packages
 ./android update sdk --no-ui
 
-# set path
-#vi ~/.zshrc << EOT
-
 export PATH=${PATH}:$HOME/sdk/android-sdk-linux/platform-tools:$HOME/sdk/android-sdk-linux/tools:$HOME/sdk/android-sdk-linux/build-tools/22.0.1/
-
-source ~/.zshrc
 
 # adb
 sudo apt-get install libc6:i386 libstdc++6:i386
