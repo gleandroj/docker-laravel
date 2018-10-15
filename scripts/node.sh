@@ -22,5 +22,6 @@ npm install -g bower
 npm install -g @angular/cli
 npm install -g protractor
 npm install -g pm2
+npm install -g ionic
 
 webdriver-manager update
