@@ -21,7 +21,7 @@ rm -rf android-sdk_r24.2-linux.tgz
 export PATH=${PATH}:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/build-tools/22.0.1/
 export ANDROID_HOME=/opt/android-sdk/
 
-chmod 777 /opt/android-sdk/
+chmod -R 777 /opt/android-sdk/
 
 # install all sdk packages
 android update sdk --no-ui
