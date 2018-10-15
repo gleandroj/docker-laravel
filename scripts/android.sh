@@ -18,11 +18,11 @@ export ANDROID_TARGET_SDK="android-28" \
     ANDROID_IMAGES="sys-img-armeabi-v7a-android-28,sys-img-armeabi-v7a-android-28"   
 export ANDROID_SDK_URL=https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
 curl -sSL "${ANDROID_SDK_URL}" -o android-sdk-linux.zip \
-    && unzip android-sdk-linux.zip -d android-sdk-linux \
+    && unzip android-sdk-linux.zip -d ${SDK_HOME}/android-sdk \
   && rm -rf android-sdk-linux.zip
   
 # Set ANDROID_HOME
-export ANDROID_HOME=$PWD/android-sdk-linux
+export ANDROID_HOME=${SDK_HOME}/android-sdk
 export PATH=${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:$PATH
 
 # licenses
