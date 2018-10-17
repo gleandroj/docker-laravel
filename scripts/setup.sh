@@ -37,7 +37,7 @@ sed -i "s/;listen\.owner.*/listen.owner = ${DEPLOY_USER}/" /etc/php/7.1/fpm/pool
 sed -i "s/;listen\.group.*/listen.group = ${DEPLOY_USER}/" /etc/php/7.1/fpm/pool.d/www.conf
 sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.1/fpm/pool.d/www.conf
 sed -i "s/;request_terminate_timeout.*/request_terminate_timeout = 60/" /etc/php/7.1/fpm/pool.d/www.conf
-sed -i "s/;clear_env = no/clear_env = no/" /etc/php/7.1/fpm/pool.d/www.conf
+sed -i "s/;clear_env = yes/clear_env = no/" /etc/php/7.1/fpm/pool.d/www.conf
 
 # Ajusta as permicoes do diretorio de sessoes
 chmod 733 /var/lib/php/sessions
