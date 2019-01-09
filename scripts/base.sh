@@ -22,17 +22,12 @@ apt-get update && apt-get install -y --no-install-recommends \
     ruby-full \
     gnupg2 \
     systemd \
-    ssh
-
-apt-get install -y \
-  ghostscript \
-  zbar-tools \
-  libzbar0 \
-  libxml2 \
-  monit \
-  libnss3-dev \
-  wget \
-  unzip
+    ssh \
+    libzbar0 \
+    libxml2 \
+    libnss3-dev \
+    wget \
+    unzip
 
 ############################################
 ## Atualizar pacotes

@@ -9,10 +9,6 @@ COPY ./scripts/base.sh /tmp/base.sh
 RUN chmod +x /tmp/base.sh && \
 /tmp/base.sh
 
-COPY ./scripts/base.sh /tmp/sudo.sh
-RUN chmod +x /tmp/sudo.sh && \
-/tmp/sudo.sh
-
 COPY ./scripts/java.sh /tmp/java.sh
 RUN chmod +x /tmp/java.sh && \
 /tmp/java.sh
@@ -25,29 +21,9 @@ COPY ./scripts/node.sh /tmp/node.sh
 RUN chmod +x /tmp/node.sh && \
 /tmp/node.sh
 
-COPY ./scripts/ngnix.sh /tmp/ngnix.sh
-RUN chmod +x /tmp/ngnix.sh && \
-/tmp/ngnix.sh
-
-COPY ./scripts/certbot.sh /tmp/certbot.sh
-RUN chmod +x /tmp/certbot.sh && \
-/tmp/certbot.sh
-
 COPY ./scripts/php.sh /tmp/php.sh
 RUN chmod +x /tmp/php.sh && \
 /tmp/php.sh
-
-COPY ./scripts/heroku.sh /tmp/heroku.sh
-RUN chmod +x /tmp/heroku.sh && \
-/tmp/heroku.sh
-
-COPY ./scripts/gems.sh /tmp/gems.sh
-RUN chmod +x /tmp/gems.sh && \
-/tmp/gems.sh
-
-COPY ./scripts/google-chrome.sh /tmp/google-chrome.sh
-RUN chmod +x /tmp/google-chrome.sh && \
-/tmp/google-chrome.sh
 
 COPY ./scripts/android.sh /tmp/android.sh
 RUN chmod +x /tmp/android.sh && \
