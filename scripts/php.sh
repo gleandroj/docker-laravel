@@ -12,7 +12,6 @@ add-apt-repository ppa:ondrej/php
 export LANG=C.UTF-8
 
 echo "Instalando o PHP 7.1 ..."
-#php7.1-memcached \
 
 apt-get install -y  \
   libpcre3 \

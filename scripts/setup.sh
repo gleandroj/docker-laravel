@@ -293,42 +293,6 @@ nginx -t
 service nginx restart
 
 ############################################
-## Configura o Monit com Nginx
-############################################
-
-echo "Configurando o Monit com Nginx..."
-
-ln -s /etc/monit/conf-available/nginx /etc/monit/conf-enabled/nginx
-
-## Testa as configuracoes do monit
-monit -t
-
-## Carrega e ativa as configuracoes
-service monit reload
-
-############################################
-## Configura o Monit com PHP 7 FPM
-############################################
-
-echo "Configurando o Monit com PHP 7 FPM..."
-
-touch /etc/monit/conf-available/php7-fpm
-cat > /etc/monit/conf-available/php7-fpm << EOF
-check process php7-fpm with pidfile /run/php/php7.1-fpm.pid
-    start program = "/etc/init.d/php7.1-fpm start" with timeout 60 seconds
-    stop program  = "/etc/init.d/php7.1-fpm stop"
-    if failed unixsocket /var/run/php/php7.1-fpm.sock then restart
-EOF
-
-ln -s /etc/monit/conf-available/php7-fpm /etc/monit/conf-enabled/php7-fpm
-
-## Testa as configuracoes do monit
-monit -t
-
-## Carrega e ativa as configuracoes
-service monit reload
-
-############################################
 ## Limpa o sistema
 ############################################
 

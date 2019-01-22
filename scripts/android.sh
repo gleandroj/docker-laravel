@@ -1,7 +1,8 @@
 export SDK_HOME=/opt
 
 apt-get --quiet update --yes
-apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 git --no-install-recommends
+apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 git openjdk-8-jdk --no-install-recommends
+
 # Gradle
 export GRADLE_VERSION=4.1
 export GRADLE_SDK_URL=https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
@@ -56,6 +57,3 @@ unzip -q android-cmake.zip -d ${ANDROID_HOME}/cmake
 export PATH=${PATH}:${ANDROID_HOME}/cmake/bin
 chmod u+x ${ANDROID_HOME}/cmake/bin/ -R
 rm -rf android-cmake.zip
-#android-wait-for-emulator
-#curl https://raw.githubusercontent.com/Cangol/android-gradle-docker/master/android-wait-for-emulator -o ${SDK_HOME}/bin/android-wait-for-emulator
-#chmod u+x ${SDK_HOME}/bin/android-wait-for-emulator

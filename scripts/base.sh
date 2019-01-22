@@ -19,7 +19,6 @@ apt-get update && apt-get install -y --no-install-recommends \
     cron \
     curl \
     software-properties-common \
-    ruby-full \
     gnupg2 \
     systemd \
     ssh
@@ -32,8 +31,8 @@ apt-get install -y \
   monit \
   libnss3-dev \
   wget \
-  unzip
-
+  unzip \
+  imagemagick
 ############################################
 ## Atualizar pacotes
 ############################################

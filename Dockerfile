@@ -9,16 +9,9 @@ COPY ./scripts/* /tmp/
 RUN useradd ${DEPLOY_USER} && \
     chmod +x -R /tmp/* && \
     /tmp/base.sh && \
-    /tmp/sudo.sh && \
-    /tmp/java.sh && \
-    /tmp/imagemagick.sh && \
     /tmp/node.sh && \
     /tmp/ngnix.sh && \
-    /tmp/certbot.sh && \
     /tmp/php.sh && \
-    /tmp/heroku.sh && \
-    /tmp/gems.sh && \
-    /tmp/google-chrome.sh && \
     /tmp/android.sh && \
     /tmp/setup.sh && \
     mkdir /scripts
