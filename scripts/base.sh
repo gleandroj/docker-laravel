@@ -22,7 +22,8 @@ apt-get update && apt-get install -y --no-install-recommends \
     ruby-full \
     gnupg2 \
     systemd \
-    ssh
+    ssh \
+    imagemagick
 
 apt-get install -y \
   ghostscript \
