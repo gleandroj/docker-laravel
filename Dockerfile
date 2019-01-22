@@ -28,13 +28,12 @@ RUN chown $USER:$USER /scripts && \
     mkdir -p /home/deploy/app && \
     chown -R $USER:$USER /home/deploy
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
-ENV GRADLE_HOME /opt/gradle-4.1
-ENV KOTLIN_HOME /opt/kotlinc
-ENV ANDROID_HOME /opt/android-sdk
-ENV PATH ${PATH}:${ANDROID_HOME}/cmake/bin:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin:${ANDROID_NDK_HOME}
-ENV _JAVA_OPTIONS -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 \
+    GRADLE_HOME=/opt/gradle-4.1 \
+    KOTLIN_HOME=/opt/kotlinc \
+    ANDROID_HOME=/opt/android-sdk \
+    PATH=${PATH}:${ANDROID_HOME}/cmake/bin:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin:${ANDROID_NDK_HOME} \
+    _JAVA_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
 
 WORKDIR /home/deploy/app
-
 ENTRYPOINT ["bash", "/scripts/init.sh"]
