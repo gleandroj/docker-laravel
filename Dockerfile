@@ -2,7 +2,7 @@ FROM ubuntu
 
 ARG APP_ENV="testing"
 ENV DEPLOY_USER="deploy" \
-    APP_DOMAIN "app.localhost" \    
+    APP_DOMAIN="app.localhost" \    
     APP_ENV=${APP_ENV}
 
 COPY ./scripts/* /tmp
