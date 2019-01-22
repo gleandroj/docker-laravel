@@ -24,9 +24,9 @@ COPY ./scripts/init.sh /scripts
 RUN chown $USER:$USER /scripts && \
     chmod +x /scripts/*.sh && \
     mkdir -p /home/deploy/app && \
-    chown -R deploy:deploy /home/deploy
+    chown -R $USER:$USER /home/deploy
 
-ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64" \
     GRADLE_HOME="/opt/gradle-4.1" \
     KOTLIN_HOME="/opt/kotlinc" \
     ANDROID_HOME="/opt/android-sdk" \
