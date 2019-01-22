@@ -1,20 +1,20 @@
 FROM ubuntu
 
-ENV DEPLOY_USER deploy
-ENV APP_DOMAIN "app.localhost"
 ARG APP_ENV="testing"
-ENV APP_ENV=${APP_ENV}
+ENV DEPLOY_USER="deploy" \
+    APP_DOMAIN="app.localhost" \
+    APP_ENV=${APP_ENV}
 
 COPY ./scripts/* /tmp/
 
 RUN useradd ${DEPLOY_USER} && \
-chmod +x -R /tmp/* && \
-/tmp/base.sh && \
-/tmp/node.sh && \
-/tmp/php.sh  && \
-/tmp/ngnix.sh && \
-/tmp/setup.sh && \
-mkdir -p /scripts
+    chmod +x -R /tmp/* && \
+    /tmp/base.sh && \
+    /tmp/node.sh && \
+    /tmp/php.sh  && \
+    /tmp/ngnix.sh && \
+    /tmp/setup.sh && \
+    mkdir -p /scripts
 
 COPY ./scripts/init.sh /scripts
 
