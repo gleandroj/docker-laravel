@@ -5,46 +5,23 @@ ENV APP_DOMAIN "app.localhost"
 ARG APP_ENV="testing"
 ENV APP_ENV=${APP_ENV}
 
-COPY ./scripts/base.sh /tmp/base.sh
-RUN chmod +x /tmp/base.sh && \
-/tmp/base.sh
+COPY ./scripts/* /tmp/
 
-COPY ./scripts/node.sh /tmp/node.sh
-RUN chmod +x /tmp/node.sh && \
-/tmp/node.sh
-
-COPY ./scripts/php.sh /tmp/php.sh
-RUN chmod +x /tmp/php.sh && \
-/tmp/php.sh
-
-COPY ./scripts/ngnix.sh /tmp/ngnix.sh
-RUN chmod +x /tmp/ngnix.sh && \
-/tmp/ngnix.sh
-
-RUN useradd ${DEPLOY_USER}
-
-COPY ./scripts/setup.sh /tmp/setup.sh
-RUN chmod +x /tmp/setup.sh && \
-/tmp/setup.sh
-
-RUN mkdir -p /scripts
+RUN useradd ${DEPLOY_USER} && \
+chmod +x -R /tmp/* && \
+/tmp/base.sh && \
+/tmp/node.sh && \
+/tmp/php.sh  && \
+/tmp/ngnix.sh && \
+/tmp/setup.sh && \
+mkdir -p /scripts
 
 COPY ./scripts/init.sh /scripts
+
 RUN chown $USER:$USER /scripts && \
     chmod +x /scripts/*.sh && \
     mkdir -p /home/deploy/app && \
-    chown -R deploy:deploy /home/deploy
-
-ONBUILD USER root
-
-ONBUILD COPY . /home/deploy/app
-
-ONBUILD COPY ./scripts/onbuild.sh /tmp/onbuild.sh
-
-ONBUILD RUN chmod +x /tmp/onbuild.sh && \
-/tmp/onbuild.sh
-
-ONBUILD USER deploy
+    chown -R $USER:$USER /home/deploy
 
 WORKDIR /home/deploy/app
 
