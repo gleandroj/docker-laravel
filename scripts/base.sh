@@ -16,7 +16,6 @@ apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     tzdata \
     git-core \
-    cron \
     curl \
     software-properties-common \
     gnupg2 \
