@@ -17,6 +17,10 @@ COPY ./scripts/php.sh /tmp/php.sh
 RUN chmod +x /tmp/php.sh && \
 /tmp/php.sh
 
+COPY ./scripts/ngnix.sh /tmp/ngnix.sh
+RUN chmod +x /tmp/ngnix.sh && \
+/tmp/ngnix.sh
+
 RUN useradd ${DEPLOY_USER}
 
 COPY ./scripts/setup.sh /tmp/setup.sh
