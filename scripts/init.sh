@@ -22,18 +22,6 @@ echo -e "\nIniciando os servicos..."
 
 # ## PHP 7 FPM
 # monit start php7-fpm
-# monit monitor php7-fpm
-
-# ## Redis
-# monit start redis
-# monit monitor redis
-
-# ## Memcached
-# monit start memcache
-# monit monitor memcache
-
 ## Inicia o nginx
-#echo -e "\nRodando o Nginx..."
-#/usr/sbin/nginx -g "daemon off;"
-
-while : ; do echo 'foreground' ; done &
+echo -e "\nRodando o Nginx..."
+/usr/sbin/nginx -g "daemon off;"

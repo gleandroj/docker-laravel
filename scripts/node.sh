@@ -20,9 +20,9 @@ apt-get install -y nodejs
 # Instala pacotes npm
 npm install -g bower
 npm install -g @angular/cli
-npm install -g protractor
+#npm install -g protractor
 npm install -g pm2
 npm install -g ionic
 npm install -g cordova
 
-webdriver-manager update
+#webdriver-manager update

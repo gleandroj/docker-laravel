@@ -9,10 +9,6 @@ COPY ./scripts/base.sh /tmp/base.sh
 RUN chmod +x /tmp/base.sh && \
 /tmp/base.sh
 
-COPY ./scripts/imagemagick.sh /tmp/imagemagick.sh
-RUN chmod +x /tmp/imagemagick.sh && \
-/tmp/imagemagick.sh
-
 COPY ./scripts/node.sh /tmp/node.sh
 RUN chmod +x /tmp/node.sh && \
 /tmp/node.sh
