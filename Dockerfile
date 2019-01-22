@@ -5,7 +5,7 @@ ENV DEPLOY_USER="deploy" \
     APP_DOMAIN="app.localhost" \    
     APP_ENV=${APP_ENV}
 
-COPY ./scripts/* /tmp
+COPY ./scripts/* /tmp/
 RUN useradd ${DEPLOY_USER} && \
     chmod +x -R /tmp/* && \
     /tmp/base.sh && \
