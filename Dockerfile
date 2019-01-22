@@ -20,7 +20,8 @@ RUN useradd ${DEPLOY_USER} && \
     /tmp/gems.sh && \
     /tmp/google-chrome.sh && \
     /tmp/android.sh && \
-    /tmp/setup.sh
+    /tmp/setup.sh &&
+    mkdir /scripts
 
 COPY ./scripts/init.sh /scripts
 RUN chown $USER:$USER /scripts && \
