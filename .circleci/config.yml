@@ -10,9 +10,9 @@ jobs:
      - run: |
          docker login -u $DOCKER_USER -p $DOCKER_PASS
      # build the application image
-     - run: docker build -t gleandroj/laravel:latest .
+     - run: docker build -t gleandroj/laravel:slim .
      # deploy the image
-     - run: docker push gleandroj/laravel:latest
+     - run: docker push gleandroj/laravel:slim
 # Fluxo do CircleCI
 workflows:
   version: 2
