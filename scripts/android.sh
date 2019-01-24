@@ -5,11 +5,15 @@ apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 git openjdk-8-
 
 # Gradle
 export GRADLE_VERSION=4.1
+
 export GRADLE_SDK_URL=https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
+
 curl -sSL "${GRADLE_SDK_URL}" -o gradle-${GRADLE_VERSION}-bin.zip  \
 	&& unzip gradle-${GRADLE_VERSION}-bin.zip -d ${SDK_HOME}  \
 	&& rm -rf gradle-${GRADLE_VERSION}-bin.zip
+
 export GRADLE_HOME=${SDK_HOME}/gradle-${GRADLE_VERSION}
+
 export PATH=${GRADLE_HOME}/bin:$PATH
 
 # android sdk|build-tools|image
@@ -17,13 +21,17 @@ export ANDROID_TARGET_SDK="android-28" \
     ANDROID_BUILD_TOOLS="27.0.3" \
     ANDROID_SDK_TOOLS="3859397" \
     ANDROID_IMAGES="sys-img-armeabi-v7a-android-28,sys-img-armeabi-v7a-android-28"   
+
 export ANDROID_SDK_URL=https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
+
 curl -sSL "${ANDROID_SDK_URL}" -o android-sdk-linux.zip \
     && unzip android-sdk-linux.zip -d ${SDK_HOME}/android-sdk \
   && rm -rf android-sdk-linux.zip
   
 # Set ANDROID_HOME
+
 export ANDROID_HOME=${SDK_HOME}/android-sdk
+
 export PATH=${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:$PATH
 
 # licenses
@@ -42,13 +50,19 @@ echo yes | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;s
 echo yes | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
 
 # android ndk
+
 export ANDROID_NDK_VERSION=r16b
+
 export ANDROID_NDK_URL=http://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
+
 curl -L "${ANDROID_NDK_URL}" -o android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip  \
   && unzip android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip -d ${SDK_HOME}  \
   && rm -rf android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
+
 export ANDROID_NDK_HOME=${SDK_HOME}/android-ndk-${ANDROID_NDK_VERSION}
+
 export PATH=${ANDROID_NDK_HOME}:$PATH
+
 chmod u+x ${ANDROID_NDK_HOME}/ -R
 
 # Android CMake
