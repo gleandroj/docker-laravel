@@ -26,7 +26,8 @@ apt-get update && apt-get install -y --no-install-recommends \
     libnss3-dev \
     wget \
     unzip \
-    imagemagick
+    imagemagick \
+    libzmq3-dev
 
 ############################################
 ## Atualizar pacotes
