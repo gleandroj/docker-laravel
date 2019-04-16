@@ -36,6 +36,7 @@ apt-get install -y  \
   php7.1-dba \
   php7.1-opcache \
   php7.1-xdebug \
+  php7.1-gmp \
   postgresql-client
 
 # Instala o Composer
