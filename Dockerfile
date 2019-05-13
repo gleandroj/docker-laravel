@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM ubuntu
 
 ARG APP_ENV="local"
 ENV DEPLOY_USER="deploy" \
