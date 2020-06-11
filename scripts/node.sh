@@ -21,5 +21,5 @@ apt-get install -y nodejs
 npm install -g bower
 npm install -g @angular/cli
 npm install -g pm2
-npm install -g ionic
+npm install -g @ionic/cli
 npm install -g cordova
