@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   web:
-    image: gleandroj/laravel:slim
+    image: gleandroj/laravel:wine
     ports:
       - "80:80"
     volumes:
