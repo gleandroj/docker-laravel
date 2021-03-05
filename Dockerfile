@@ -22,6 +22,8 @@ RUN chown $USER:$USER /scripts && \
     chmod +x /scripts/*.sh && \
     mkdir -p /home/deploy/app && \
     chown -R $USER:$USER /home/deploy
+    
+RUN composer self-update
 
 WORKDIR /home/deploy/app
 
