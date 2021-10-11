@@ -46,7 +46,7 @@ RUN pecl install imagick mcrypt && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install -j$(nproc) gd && \
     docker-php-ext-install pgsql pdo_pgsql curl mbstring xml && \
-    docker-php-ext-install json zip bcmath intl readline dba opcache gmp && \
+    docker-php-ext-install json zip bcmath intl readline dba opcache gmp calendar && \
     mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 COPY setup.sh /tmp
