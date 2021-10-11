@@ -52,3 +52,5 @@ RUN pecl install imagick mcrypt && \
 COPY setup.sh /tmp
 
 RUN ls -la /tmp && chmod +x /tmp/setup.sh && bash /tmp/setup.sh
+
+EXPOSE 9000
