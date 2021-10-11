@@ -49,8 +49,15 @@ RUN pecl install imagick mcrypt && \
     docker-php-ext-install json zip bcmath intl readline dba opcache gmp calendar && \
     mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-COPY setup.sh /tmp
+RUN apt-get update -q && \
+    apt-get install nginx nginx-extras -y
 
-RUN ls -la /tmp && chmod +x /tmp/setup.sh && bash /tmp/setup.sh
+COPY scripts /tmp
 
-EXPOSE 9000
+RUN ls -la /tmp && \
+    chmod +x /tmp/*.sh && \
+    bash /tmp/setup.sh
+
+EXPOSE 80 443
+
+ENTRYPOINT ["bash", "/entry.sh"]
