@@ -13,7 +13,8 @@ RUN useradd ${DEPLOY_USER} && \
 
 COPY ./scripts/features/* /tmp/
 
-RUN /tmp/node.sh && \
+RUN chmod +x -R /tmp/* && \
+    /tmp/node.sh && \
     /tmp/php.sh  && \
     /tmp/ngnix.sh && \
     /tmp/setup.sh
