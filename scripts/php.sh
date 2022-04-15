@@ -21,6 +21,7 @@ apt-get install -y  \
   php7.4-pgsql \
   php7.4-sqlite3 \
   php7.4-gd \
+  php7.4-gmp \
   php7.4-curl \
   php7.4-imap \
   php7.4-mysql \
