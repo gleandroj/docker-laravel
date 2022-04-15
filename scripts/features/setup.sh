@@ -318,5 +318,6 @@ chown $USER:$USER /scripts
 chmod +x /scripts/*.sh 
 mkdir -p /home/deploy/app
 chown -R $USER:$USER /home/deploy
+composer self-update
 
 rm -rf /tmp/* /var/tmp/*
