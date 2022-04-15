@@ -17,7 +17,7 @@ apt-add-repository ppa:ondrej/apache2 -y
 
 apt-get update -q
 apt-get install -y nginx \
-                   php7.1-fpm \
+                   php7.4-fpm \
                    nginx-extras
 
 service nginx reload
