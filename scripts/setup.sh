@@ -312,4 +312,11 @@ echo "Limpando o sistema..."
 apt-get -qq autoclean
 apt-get -qq autoremove
 
+mkdir -p /scripts
+cp /tmp/init.sh /scripts
+chown $USER:$USER /scripts
+chmod +x /scripts/*.sh 
+mkdir -p /home/deploy/app
+chown -R $USER:$USER /home/deploy
+
 rm -rf /tmp/* /var/tmp/*
