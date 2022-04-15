@@ -43,10 +43,10 @@ sed -i "s/;clear_env = yes/clear_env = no/" /etc/php/7.1/fpm/pool.d/www.conf
 chmod 733 /var/lib/php/sessions
 chmod +t /var/lib/php/sessions
 
-service php7.1-fpm reload
-service php7.1-fpm restart
+service php7.4-fpm reload
+service php7.4-fpm restart
 
-systemctl enable php7.1-fpm.service
+systemctl enable php7.4-fpm.service
 
 # Reinicia o Nginx
 service nginx reload
@@ -209,7 +209,7 @@ server {
     error_page 404 /index.php;
     location ~ \.php${DOLLAR} {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
     }
     location ~ /\.ht {
         deny all;
@@ -277,7 +277,7 @@ server {
     error_page 404 /index.php;
     location ~ \.php${DOLLAR} {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
     }
     location ~ /\.ht {
         deny all;
