@@ -27,7 +27,9 @@ apt-get update && apt-get install -y --no-install-recommends \
     wget \
     unzip \
     imagemagick \
-    libzmq3-dev
+    libzmq3-dev \
+    nano \
+    htop
 
 ############################################
 ## Atualizar pacotes
