@@ -18,8 +18,4 @@ apt-get update
 apt-get install -y nodejs
 
 # Instala pacotes npm
-npm install -g bower
 npm install -g @angular/cli
-npm install -g pm2
-npm install -g @ionic/cli
-npm install -g cordova
