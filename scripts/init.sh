@@ -7,7 +7,7 @@ echo "Teste de Inicialização"
 echo -e "\nIniciando os servicos..."
 
 service cron start
-service php7.1-fpm start
+service php7.4-fpm start
 # service memcached restart
 
 #monit stop nginx
