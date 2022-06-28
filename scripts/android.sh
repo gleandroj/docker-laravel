@@ -72,4 +72,4 @@ export PATH=${PATH}:${ANDROID_HOME}/cmake/bin
 chmod u+x ${ANDROID_HOME}/cmake/bin/ -R
 rm -rf android-cmake.zip
 
-npm i -g cordova ionic
+npm i -g cordova @ionic/cli
