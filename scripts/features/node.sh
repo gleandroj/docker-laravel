@@ -18,4 +18,5 @@ apt-get update
 apt-get install -y nodejs
 
 # Instala pacotes npm
+npm install -g yarn
 npm install -g @angular/cli
