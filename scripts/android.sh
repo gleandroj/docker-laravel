@@ -4,7 +4,7 @@ apt-get --quiet update --yes
 apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 git openjdk-17-jdk --no-install-recommends
 
 # Gradle
-export GRADLE_VERSION=4.1
+export GRADLE_VERSION=8.0.2
 
 export GRADLE_SDK_URL=https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
 
