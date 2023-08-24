@@ -4,7 +4,7 @@ ENV DEPLOY_USER="deploy"
 COPY ./scripts/* /tmp/
 RUN chmod +x -R /tmp/* && \
     /tmp/android.sh
-ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64" \
+ENV JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64" \
     GRADLE_HOME="/opt/gradle-4.1" \
     KOTLIN_HOME="/opt/kotlinc" \
     ANDROID_HOME="/opt/android-sdk" \
