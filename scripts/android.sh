@@ -1,7 +1,7 @@
 export SDK_HOME=/opt
 
 apt-get --quiet update --yes
-apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 git openjdk-8-jdk --no-install-recommends
+apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 git openjdk-17-jdk --no-install-recommends
 
 # Gradle
 export GRADLE_VERSION=4.1
