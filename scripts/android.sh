@@ -18,7 +18,7 @@ export PATH=${GRADLE_HOME}/bin:$PATH
 
 # android sdk|build-tools|image
 export ANDROID_TARGET_SDK="android-28" \
-    ANDROID_BUILD_TOOLS="33.0.2" \
+    ANDROID_BUILD_TOOLS="24.0.3" \
     ANDROID_SDK_TOOLS="10406996" \
     ANDROID_IMAGES="sys-img-armeabi-v7a-android-28,sys-img-armeabi-v7a-android-28"   
 
