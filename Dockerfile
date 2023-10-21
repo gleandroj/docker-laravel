@@ -8,7 +8,7 @@ ENV JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64" \
     GRADLE_HOME="/opt/gradle-4.1" \
     KOTLIN_HOME="/opt/kotlinc" \
     ANDROID_HOME="/opt/android-sdk"
-ENV PATH="${PATH}:${ANDROID_HOME}/cmake/bin:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/cmdline-tools/tools/bin:${ANDROID_HOME}/build-tools/27.0.3:${ANDROID_HOME}/tools/bin:${ANDROID_NDK_HOME}"
+ENV PATH="${PATH}:${ANDROID_HOME}/cmake/bin:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/cmdline-tools/tools/bin:${ANDROID_HOME}/build-tools/24.0.3:${ANDROID_HOME}/tools/bin:${ANDROID_NDK_HOME}"
 RUN apt-get install -y locales && \
     locale-gen en_US.UTF-8
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
