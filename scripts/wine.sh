@@ -9,9 +9,6 @@ echo "Configurando Repositórios..."
 ############################################
 
 dpkg --add-architecture i386
-wget -O - https://dl.winehq.org/wine-builds/winehq.key | apt-key add -
-add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-add-apt-repository ppa:cybermax-dexter/sdl2-backport
 
 echo "Atualizando pacotes..."
 ############################################
@@ -25,5 +22,4 @@ echo "Instalando wine..."
 ############################################
 ## Instalar wine
 ############################################
-
-apt install --install-recommends winehq-stable -y
+apt install --install-recommends wine64 -y
