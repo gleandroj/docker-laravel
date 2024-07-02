@@ -24,4 +24,4 @@ echo "Instalando wine..."
 ############################################
 apt install --install-recommends wine64 -y
 
-ln -s /usr/bin/wine /usr/local/bin/wine64
+ln -s /bin/wine /usr/local/bin/wine64
