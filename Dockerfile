@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:latest
 
 ARG APP_ENV="local"
 ENV DEPLOY_USER="deploy" \
